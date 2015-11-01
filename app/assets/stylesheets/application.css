@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ li{ float:left; display:inline;margin-right: 4px;}
  #cssmenu {
    margin: 0;
    padding: 0;
@@ -57,15 +58,15 @@
   
   border: 1px solid black;
  }
-
- body {
-
-  background-color: pink;
-  background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRH1LudbDGz9PtUyv4bJOGUgJ2hOZE-E5XGOp4uJt5_Ikq_RH3uWw");
-  background-repeat: repeat-x;
-  /*background-attachment: fixed;*/
-  /*background-position: center; */
+ body { 
+   background: url("http://www.ultrahighdefinitionwallpapers.com/wp-content/uploads/2015/04/Food-Full-4k-UHD-Wallpapers-52.jpg") no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
  }
+
+
  a {
   color: purple;
   text-decoration: underline;

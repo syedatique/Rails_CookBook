@@ -20,8 +20,8 @@
   <%= @ingredient.recipes.map {|k| k.name}.join(', ') %>
 </p>
 
-<%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
-<%#= link_to 'Back', recipes_path %>
+<strong><%= link_to 'Edit', edit_ingredient_path(@ingredient) %></strong>
+<strong><%= link_to 'Back', recipes_path %></strong>
 
 
 

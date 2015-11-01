@@ -1,11 +1,11 @@
-<nav class = "container">
+<nav style="padding: 20px;">
   <p><strong>Recipe Name:</strong><%= recipe.name%></p>
   <p><strong>Ingredients Name:</strong> <%= recipe.ingredients.map {|k| k.name}.join(', ') %></p>
   
-  <div><%= button_to('Show', recipe_path(recipe), method: :get)%>
-  <%= button_to('Edit', edit_recipe_path(recipe), method: :get)%>
-  <%= button_to('Delete recipe', recipe_path(recipe), method: :delete, data:{confirm: 'Delete the recipe? Are you sure?'})%>
-  </div>
-  <br>
-  <br>
+<ul>
+  <li><%= button_to('Show', recipe_path(recipe), method: :get)%></li>
+  <li><%= button_to('Edit', edit_recipe_path(recipe), method: :get)%></li>
+  <li><%= button_to('Delete recipe', recipe_path(recipe), method: :delete, data:{confirm: 'Delete the recipe? Are you sure?'})%></li>
+</ul>
+ 
 </nav>

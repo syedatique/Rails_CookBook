@@ -1,8 +1,8 @@
-<nav class = "container">
-  <div><strong>Catagory name: <%= catagory.name%> </strong></div>
-  
-  <%= button_to('Show', catagory_path(catagory), method: :get)%>
-  <%= button_to('Edit', edit_catagory_path(catagory), method: :get)%>
-  <%= button_to('Delete catagory', catagory_path(catagory), method: :delete, data:{confirm: 'Delete the catagory? Are you sure?'})%>
-<br>
+<nav style="padding: 20px;">
+  <p><strong>Catagory name: <%= catagory.name%> </strong></p>
+  <ul>
+    <li><%= button_to('Show', catagory_path(catagory), method: :get)%></li>
+    <li><%= button_to('Edit', edit_catagory_path(catagory), method: :get)%></li>
+    <li><%= button_to('Delete catagory', catagory_path(catagory), method: :delete, data:{confirm: 'Delete the catagory? Are you sure?'})%></li>
+  </ul>
 </nav>

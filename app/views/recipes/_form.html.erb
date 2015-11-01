@@ -11,23 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
+  <div style="width: 500px">
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :instructions %><br>
+  <div style="width: 500px">
+    <%= f.label :instructions %>
     <%= f.text_area :instructions %>
   </div>
 
-  <div class="field">
-    <%= f.label :catagory_id %><br>
-    <%= f.select("catagory_id", Catagory.all.map {|c| [c.name, c.id]}, {prompt: 'Select Catagory'}) %>
+  <div style="width: 500px">
+    <%= f.label :catagory_id %>
+    <%= f.select("catagory_id", Catagory.all.map {|c| [c.name, c.id]}, {prompt: 'Select Catagory'}, html_options = {}) %>
   </div>
+  <br>
 
-
-  <div class="field">
+  <p>Choose your ingredients from options below:</p>
+  <div >
      <%#= collection_check_boxes(:recipe, :ingredient_ids, @ingredients, :id, :name) %>
      <%= collection_check_boxes(:recipe, :ingredient_ids, Ingredient.all, :id, :name) %>
 

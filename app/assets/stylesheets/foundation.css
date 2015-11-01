@@ -1324,7 +1324,9 @@ button::-moz-focus-inner {
     display: inline-block; } }
 /* Standard Forms */
 form {
-  margin: 0 0 1rem; }
+  margin: 0 0 1rem;
+  /*width: 200px; */
+}
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
