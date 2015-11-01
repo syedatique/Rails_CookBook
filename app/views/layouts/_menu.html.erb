@@ -1,0 +1,42 @@
+
+
+
+<nav class="top-bar" data-topbar role="navigation">
+<section class="top-bar-section">
+  <ul class="left">
+    <li> <%= link_to "All catagories", catagories_path %> </li>
+    <li> <%= link_to('New Catagory', new_catagory_path)%></li> 
+    <li> <%= form_tag(catagories_path, method: "get") do %></li>
+         <%#= label_tag(:name, "Search for Catagory:") %>
+          <li><%= text_field_tag(:name) %></li>
+          <li><%= submit_tag("Search Catagory") %></li>
+          <li><% end %></li>
+  </ul>
+</section>
+
+<section class="top-bar-section">
+  <ul>
+    <li> <%= link_to "All recipes", recipes_path %> </li>
+    <li> <%= link_to('New Recipe', new_recipe_path)%></li>
+    <li><%= form_tag(recipes_path, method: "get") do %></li>
+      <%#= label_tag(:name, "Search for Recipe:") %>
+      <li><%= text_field_tag(:name) %></li>
+      <li><%= submit_tag("Search Recipe") %></li>
+      <li><% end %></li>
+  </ul>
+</section>
+
+<section class="top-bar-section">
+  <ul>
+    <li> <%= link_to "All ingredients", ingredients_path %> </li>
+    <li> <%= link_to('New ingredient', new_ingredient_path)%></li>
+    <li><%= form_tag(ingredients_path, method: "get") do %></li>
+        <%#= label_tag(:name, "Search for Ingredient:") %>
+        <li><%= text_field_tag(:name) %></li>
+        <li><%= submit_tag("Search Ingredient") %></li>
+        <li><% end %></li>
+  </ul>
+</section>
+
+</nav>
+

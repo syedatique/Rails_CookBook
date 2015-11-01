@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='/normalize.css'>
+  <link rel='stylesheet' href='/foundation.css'>
+  <title>RailsCookbook</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<header>
+  <h1 style="text-align:center; color:red; font-size: 48px">CookBook App</h1>
+</header>
+<div>
+
+  <%= render partial: "layouts/menu"%>
+
+  <%= yield %>
+  
+</div>
+
+<br>
+<strong><%= link_to 'Back', catagories_path %></strong>
+
+</body>
+</html>

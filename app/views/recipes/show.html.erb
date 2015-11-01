@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recipe Name:</strong>
+  <%= @recipe.name %>
+</p>
+<p>
+  <strong>Catagory:</strong>
+  <%= @recipe.name %> is in catagory: <%= @recipe.catagory.try(:name) %> <%#= Catagory.find(@recipe.catagory_id).name%>
+  
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @recipe.instructions %>
+</p>
+
+<p>
+  <strong>Ingredients Name:</strong>
+  <%= @recipe.ingredients.map {|k| k.name}.join(', ') %>
+  <%#= @recipe.ingredients.map {|k| k.try(:name)}.join(', ') %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%#= link_to 'Back', recipes_path %>
+
+
+
+
