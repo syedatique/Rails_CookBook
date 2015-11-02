@@ -1,12 +1,12 @@
 <nav class="top-bar" data-topbar role="navigation">
 <section class="top-bar-section">
   <ul class="left">
-    <li> <%= link_to "All catagories", catagories_path %> </li>
-    <!-- <li> <%= link_to('New Catagory', new_catagory_path)%></li>  -->
-    <li> <%= form_tag(catagories_path, method: "get") do %></li>
-         <%#= label_tag(:name, "Search for Catagory:") %>
+    <li> <%= link_to "All categories", categories_path %> </li>
+    <!-- <li> <%= link_to('New Category', new_category_path)%></li>  -->
+    <li> <%= form_tag(categories_path, method: "get") do %></li>
+         <%#= label_tag(:name, "Search for Category:") %>
           <li><%= text_field_tag(:name) %></li>
-          <li><%= submit_tag("Search Catagory") %></li>
+          <li><%= submit_tag("Search Category") %></li>
           <li><% end %></li>
   </ul>
 </section>

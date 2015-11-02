@@ -22,8 +22,8 @@
   </div>
 
   <div style="width: 500px">
-    <%= f.label :catagory_id %>
-    <%= f.select("catagory_id", Catagory.all.map {|c| [c.name, c.id]}, {prompt: 'Select Catagory'}, html_options = {}) %>
+    <%= f.label :category_id %>
+    <%= f.select("category_id", Category.all.map {|c| [c.name, c.id]}, {prompt: 'Select Category'}, html_options = {}) %>
   </div>
   <br>
 

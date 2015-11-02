@@ -2,13 +2,13 @@ require 'test_helper'
 
 class CatagoriesControllerTest < ActionController::TestCase
   setup do
-    @catagory = catagories(:one)
+    @category = categories(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:catagories)
+    assert_not_nil assigns(:categories)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class CatagoriesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create catagory" do
-    assert_difference('Catagory.count') do
-      post :create, catagory: { name: @catagory.name }
+  test "should create category" do
+    assert_difference('Category.count') do
+      post :create, category: { name: @category.name }
     end
 
-    assert_redirected_to catagory_path(assigns(:catagory))
+    assert_redirected_to category_path(assigns(:category))
   end
 
-  test "should show catagory" do
-    get :show, id: @catagory
+  test "should show category" do
+    get :show, id: @category
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @catagory
+    get :edit, id: @category
     assert_response :success
   end
 
-  test "should update catagory" do
-    patch :update, id: @catagory, catagory: { name: @catagory.name }
-    assert_redirected_to catagory_path(assigns(:catagory))
+  test "should update category" do
+    patch :update, id: @category, category: { name: @category.name }
+    assert_redirected_to category_path(assigns(:category))
   end
 
-  test "should destroy catagory" do
-    assert_difference('Catagory.count', -1) do
-      delete :destroy, id: @catagory
+  test "should destroy category" do
+    assert_difference('Category.count', -1) do
+      delete :destroy, id: @category
     end
 
-    assert_redirected_to catagories_path
+    assert_redirected_to categories_path
   end
 end

@@ -6,7 +6,6 @@ class CreateIngredientsRecipesJoinTable < ActiveRecord::Migration
         end
      
         add_index :ingredients_recipes, :ingredient_id
-        add_index :ingredients_recipes, :recipe_id
-      
+        add_index :ingredients_recipes, :recipe_id   
   end
 end
