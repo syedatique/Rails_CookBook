@@ -1,6 +1,6 @@
 <nav style="padding: 20px;">
   <p><strong> Ingredient Name: </strong> <%= ingredient.name%></p>
-  <p><strong>Recipe Name:</strong><%= ingredient.recipes.map {|k| k.name}.join(', ') %></p>
+  <!-- <p><strong>Recipe Name:</strong><%#= ingredient.recipes.map {|k| k.name}.join(', ') %></p> -->
   
   <ul>
   <li><%= button_to('Show', ingredient_path(ingredient), method: :get)%></li>

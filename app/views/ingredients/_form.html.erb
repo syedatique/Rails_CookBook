@@ -15,20 +15,4 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <div style="width: 500px">
-    <%= f.label :quantity %>
-    <%= f.text_area :quantity %>
-  </div>
-  <div style="width: 500px">
-    <%= f.label :unit %>
-    <%= f.text_area :unit %>
-  </div>
-  <br>
-  <p>Choose your recipe from options below:</p>
-  <div class="field">
-     <%= collection_check_boxes(:ingredient, :recipe_ids, @recipes, :id, :name) %> 
-   </div>  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <% end %>

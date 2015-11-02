@@ -1,0 +1,13 @@
+<nav style="padding: 20px;">
+  <p><strong> Ingredient Name: </strong> <%= quantity.ingredient.try(:name) %></p>
+  <p><strong>Recipe Name:</strong><%= quantity.recipe.try(:name) %></p>
+  <p>Quantity: <strong><%= quantity.quantity %></strong></p>
+  
+  <ul>
+  <li><%= button_to('Show', quantity_path(quantity), method: :get)%></li>
+  <li><%= button_to('Edit', edit_quantity_path(quantity), method: :get)%></li>
+  <li><%= button_to('Delete', quantity_path(quantity), method: :delete, data:{confirm: 'Delete the quantity? Are you sure?'})%></li>
+ </ul>
+</nav>
+
+

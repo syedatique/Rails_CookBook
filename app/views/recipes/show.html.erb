@@ -16,9 +16,11 @@
 </p>
 
 <p>
-  <strong>Ingredients Name:</strong>
-  <%= @recipe.ingredients.map {|k| k.name}.join(', ') %>
-  <%#= @recipe.ingredients.map {|k| k.try(:name)}.join(', ') %>
+<strong>Ingredients: </strong><br>
+  <% @recipe.quantities.each do |quantity| %>
+  <%= quantity.quantity %>
+  <%= quantity.ingredient.try(:name) %><br>
+  <% end %>
 </p>
 
 <strong><%= link_to 'Edit', edit_recipe_path(@recipe) %></strong>

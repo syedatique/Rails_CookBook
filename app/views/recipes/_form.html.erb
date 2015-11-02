@@ -27,12 +27,11 @@
   </div>
   <br>
 
-  <p>Choose your ingredients from options below:</p>
+ <p>Choose your ingredients from options below:</p>
   <div >
-     <%#= collection_check_boxes(:recipe, :ingredient_ids, @ingredients, :id, :name) %>
      <%= collection_check_boxes(:recipe, :ingredient_ids, Ingredient.all, :id, :name) %>
 
-   </div>  
+   </div>
 
 
   <div class="actions">

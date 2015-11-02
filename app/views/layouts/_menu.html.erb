@@ -35,5 +35,15 @@
   </ul>
 </section>
 
+<section class="top-bar-section">
+  <ul>
+    <li> <%=link_to 'All quantities', quantities_path %> </li>
+    <li><%= form_tag(quantities_path, method: "get") do %></li>
+        <li><%= text_field_tag(:name) %></li>
+        <li><%= submit_tag("Search Quantity") %></li>
+        <li><% end %></li>
+  </ul>
+</section>
+
 </nav>
 

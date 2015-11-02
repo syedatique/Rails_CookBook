@@ -4,6 +4,12 @@
   <strong>Name:</strong>
   <%= @category.name %>
 </p>
+<p>
+  <strong>Recipes:</strong><br>
+  <% @category.recipes.each do |recipe| %>
+    <%= recipe.name %><br>
+  <% end %>
+</p>
 
 <strong><%= link_to 'Edit', edit_category_path(@category) %></strong>
 <strong><%= link_to 'Back', categories_path %></strong>
