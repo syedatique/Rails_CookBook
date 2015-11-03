@@ -15,6 +15,19 @@
   <h1 style="text-align:center; color:red; font-size: 48px">CookBook App</h1>
 </header>
 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div class='login'>
+    <% if current_user %>
+      <%= current_user.email %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path %>
+      <%= link_to "Register", new_user_registration_path %>
+    <% end %>
+  </div>
+
 
   <%= render partial: "layouts/menu"%>
   

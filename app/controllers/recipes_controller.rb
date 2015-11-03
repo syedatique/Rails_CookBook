@@ -1,4 +1,10 @@
 class RecipesController < ApplicationController
+
+  load_and_authorize_resource
+
+  #make the recipe_controller require authentication...
+  before_action :authenticate_user!
+
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
 

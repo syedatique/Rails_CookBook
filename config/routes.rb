@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   resources :quantities
-  root 'recipes#index'
+  root to: 'recipes#index'
   resources :recipes
   resources :categories
   resources :ingredients

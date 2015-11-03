@@ -1,3 +1,12 @@
+<div>
+  <% if can? :create, Recipe %>
+<%= link_to "New Recipe", new_recipe_path %>
+<% end %>
+  
+</div>
+
+
+
 <nav style="padding: 20px;">
   <p><strong>Recipe Name:</strong><%= recipe.name%></p>
   <!-- <p><strong>Ingredients Name:</strong> <%# recipe.ingredients.map {|k| k.name}.join(', ') %></p> -->
